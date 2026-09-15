@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-generated script to set the environment before the execution of a command
+. /eos/user/s/svashish/k4SimDelphes/k4simdelphesenv.sh
+exec "$@"

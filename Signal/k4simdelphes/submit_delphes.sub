@@ -1,0 +1,12 @@
+executable              = run_delphes_batch.sh
+arguments               = $(SAMPLE)
+
+output                  = /eos/user/s/svashish/k4SimDelphes/$(SAMPLE).out
+error                   = /eos/user/s/svashish/k4SimDelphes/$(SAMPLE).err
+log                     = eos/user/s/svashish/k4SimDelphes/$(SAMPLE).log
+
+request_cpus            = 1
+request_memory          = 2GB
++JobFlavour             = "workday"
+
+queue SAMPLE from sample_list.txt

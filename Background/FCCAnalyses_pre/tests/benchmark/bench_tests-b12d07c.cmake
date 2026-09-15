@@ -1,0 +1,5 @@
+add_test( B_calculate_thrust /eos/user/s/svashish/FCCAnalyses_pre/tests/benchmark/bench calculate_thrust  )
+set_tests_properties( B_calculate_thrust PROPERTIES WORKING_DIRECTORY /eos/user/s/svashish/FCCAnalyses_pre/tests/benchmark)
+add_test( B_isPV /eos/user/s/svashish/FCCAnalyses_pre/tests/benchmark/bench isPV  )
+set_tests_properties( B_isPV PROPERTIES WORKING_DIRECTORY /eos/user/s/svashish/FCCAnalyses_pre/tests/benchmark)
+set( bench_TESTS B_calculate_thrust B_isPV)

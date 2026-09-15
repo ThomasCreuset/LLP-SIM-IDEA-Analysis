@@ -1,0 +1,59 @@
+The cards present in the IDEA folder have been taken from the FCC-config from winter 2023 branch:
+[Delphes_FCCee_IDEA_card](https://github.com/HEP-FCC/FCC-config/blob/spring2021/FCCee/Delphes/card_IDEA.tcl)
+
+The main difference between cards is:
+## Detector Cards Overview
+
+| Card                     | Beam pipe X₀ | VTX barrel X₀ | VTX endcap X₀ | Comment                                 |
+|---------------------------|--------------|---------------|---------------|----------------------------------------|
+| card_IDEA.tcl             | 0.35276      | 0.0937        | 0.0937        | Baseline                                |
+| heavierBP_100pc.tcl       | 0.17638      | 0.0937        | 0.0937        | Only beam pipe lighter (~half)          |
+| lighterVXD_75pc.tcl       | 0.35276      | 0.374         | 0.374         | Vertex detector much heavier (~4×)      | 
+
+The main changes I made to the default idea card- card_IDEA.tcl is:
+
+1. Set the exclusive clustering of jets to false- as we expect more jets 
+2. added gravitno's PGDID in neutrino fiLter to account for MET:
+  add PdgCode {1000049}
+3. Added gravitinos in DualReadoutCalorimeter block 
+    add EnergyFraction {1000049} {0.0 0.0}
+
+
+
+To use key4hep do this everytime in k4SimDelphes:
+```
+source /cvmfs/sw-nightlies.hsf.org/key4hep/setup.sh
+cd install
+export PATH=$(pwd)/bin:${PATH}
+export DELPHES_PATH = /eos/user/s/svashish/delphes
+export LD_LIBRARY_PATH=$(pwd)/lib64:${LD_LIBRARY_PATH}
+```
+
+Run the following code to combine delphes output with EDM4HEP:
+```
+DelphesHepMC_EDM4HEP  /eos/user/s/svashish/delphes/cards/IDEA/card_IDEA.tcl \
+                      /eos/user/s/svashish/delphes/cards/IDEA/edm4hep_IDEA.tcl \
+                      /eos/user/s/svashish/FCCAnalyses/examples/FCCee/bsm/LLPs/Stau/edm4hep_output/FCCee_110_stau_1p5m_ctau_ecm_240_delphes_nhits.root \
+                      /eos/user/s/svashish/MG5_aMC_v3_6_6/FCCee_110_stau_1p5m_ctau_ecm_240/Events/run_03/tag_1_pythia8_events.hepmc
+```
+
+
+This script is placed in : ` k4SimDelphes/standalone/src/DelphesHepMC_EDM4HEP.cpp `
+
+DelphesHepMC_EDM4HEP  /eos/user/s/svashish/delphes/cards/IDEA/card_IDEA.tcl \
+                      /eos/user/s/svashish/delphes/cards/IDEA/edm4hep_IDEA.tcl \
+                      /eos/user/s/svashish/FCCAnalyses/examples/FCCee/bsm/LLPs/Stau/edm4hep_output/FCCee_110_stau_3m_ctau_ecm_240_changed_delphes_test.root \
+                      /eos/user/s/svashish/MG5_aMC_v3_6_6/FCCee_110_stau_3m_ctau_ecm_240/Events/run_01/tag_1_pythia8_events.hepmc
+
+DelphesHepMC_EDM4HEP  /eos/user/s/svashish/delphes/cards/IDEA/card_IDEA.tcl \
+                      /eos/user/s/svashish/delphes/cards/IDEA/edm4hep_IDEA.tcl \
+                      /eos/user/s/svashish/FCCAnalyses/examples/FCCee/bsm/LLPs/Stau/edm4hep_output/FCCee_110_stau_3m_ctau_ecm_240.root \
+                      /eos/user/s/svashish/MG5_aMC_v3_6_6/FCCee_110_stau_3m_ctau_ecm_240/Events/run_01/tag_1_pythia8_events.hepmc
+
+
+// to check if it uses the correct delphes
+
+changes to delphes: make clean
+make -j8
+
+go to k4simdelphes -> source key4hep -> run clean_build.sh -> source ~/delphes_run.sh

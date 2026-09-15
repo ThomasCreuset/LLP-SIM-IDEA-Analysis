@@ -1,0 +1,232 @@
+
+#ifndef  RECONSTRUCTEDPARTICLE2TRACK_ANALYZERS_H
+#define  RECONSTRUCTEDPARTICLE2TRACK_ANALYZERS_H
+
+
+#include <cmath>
+#include <vector>
+
+#include "ROOT/RVec.hxx"
+#include "edm4hep/Quantity.h"
+#include "edm4hep/ReconstructedParticleData.h"
+#include "edm4hep/TrackData.h"
+#include "edm4hep/TrackState.h"
+#if __has_include("edm4hep/TrackerHit3DData.h")
+#include "edm4hep/TrackerHit3DData.h"
+#else
+#include "edm4hep/TrackerHitData.h"
+namespace edm4hep {
+  using TrackerHit3DData = edm4hep::TrackerHitData;
+}
+#endif
+#include <TVectorD.h>
+#include <TVector3.h>
+#include <TLorentzVector.h>
+
+#include <TMath.h>
+#include <iostream>
+#include "VertexingUtils.h"
+
+#include "edm4hep/VertexData.h"
+#include "edm4hep/Vertex.h"
+#include <tuple>
+
+namespace FCCAnalyses{
+
+namespace ReconstructedParticle2Track{
+
+  std::pair<int,int> getTrackIndex(const edm4hep::TrackState& state,
+      const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& reco,
+      const ROOT::VecOps::RVec<edm4hep::TrackState> & fullTrackStates
+  ); 
+
+  ROOT::VecOps::RVec<int> getHitsOnTrack(
+      const ROOT::VecOps::RVec<edm4hep::TrackState> & tracksToCheck,
+      const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& reco,
+      const ROOT::VecOps::RVec<edm4hep::TrackState> & fullTrackStates,
+      const ROOT::VecOps::RVec<edm4hep::TrackData> & fullTracks,
+      const ROOT::VecOps::RVec<edm4hep::TrackerHit3DData> & fullHits
+  );
+  
+  /// @brief get the indices of the reco particle belonging
+  /// to each TrackState. 
+  /// NOTE: Assumes there is an exact 1:1 correspondence between
+  ///       Tracks and TrackStates (only == 1 state saved per track in same order) 
+  /// @param in: Full list of track states
+  /// @param reco: Full list of reco particles
+  /// @return list of indices of matching reco. -1 indicates no match. 
+  ROOT::VecOps::RVec<int> recoParticleIndices_forTracks(
+    const ROOT::VecOps::RVec<edm4hep::TrackState> & in, 
+    const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> & reco);
+  
+  // now all in one vector
+  ROOT::VecOps::RVec<ROOT::VecOps::RVec<float>> findKink_candidate(
+      const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& reco,
+      const ROOT::VecOps::RVec<edm4hep::TrackState>& primary,
+      const ROOT::VecOps::RVec<edm4hep::TrackState>& displaced,
+      const ROOT::VecOps::RVec<edm4hep::TrackState> & fullTracks,
+      const ROOT::VecOps::RVec<bool> & recoPassFlags = {}
+  );
+  
+ ROOT::VecOps::RVec<VertexingUtils::FCCAnalysesVertex> KinkCandidate_VertexObject(
+      const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& reco,
+      const ROOT::VecOps::RVec<edm4hep::TrackState>& primary,
+      const ROOT::VecOps::RVec<edm4hep::TrackState>& displaced,
+      const ROOT::VecOps::RVec<edm4hep::TrackState> & fullTracks,
+      const ROOT::VecOps::RVec<bool> & recoPassFlags = {}
+  );
+  /// Return the momentum of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_mom (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in, 
+					   ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the transverse momentum pT of a track associated to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_pt (
+              ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+              ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+  
+  /// Return the theta angle of the reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_theta(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+              ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the charge of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_charge(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,  
+					     ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  //compute the magnetic field Bz
+  ROOT::VecOps::RVec<float> getRP2TRK_Bz(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& rps,
+					 const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks); //here computed for all particles passed
+
+  float Bz(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& rps,
+	   const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks); //here only computed for the first charged particle encountered
+
+  ROOT::VecOps::RVec<float> XPtoPar_dxy(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& in,
+					const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks,
+					const TLorentzVector& V, // primary vertex
+					const float& Bz);
+
+  ROOT::VecOps::RVec<float> XPtoPar_dz(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& in,
+                                        const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks,
+                                        const TLorentzVector& V, // primary vertex
+                                        const float& Bz);
+
+  ROOT::VecOps::RVec<float> XPtoPar_phi(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& in,
+					const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks,
+                                        const TLorentzVector& V, // primary vertex
+                                        const float& Bz);
+
+  ROOT::VecOps::RVec<float> XPtoPar_C(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& in,
+					const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks,
+                                        const float& Bz);
+
+  ROOT::VecOps::RVec<float> XPtoPar_ct(const ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData>& in,
+					const ROOT::VecOps::RVec<edm4hep::TrackState>& tracks,
+                                        const float& Bz);
+
+  /// Return the D0 of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_D0 (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					  ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the Z0 of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_Z0 (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					  ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the Phi of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_phi (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					   ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the omega of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_omega (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					     ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the tanLambda of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_tanLambda (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						 ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the D0 significance of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_D0_sig (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					      ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the Z0 significance of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_Z0_sig (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					      ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+
+  /// Return the variance (not the sigma)  of the the D0 of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_D0_cov (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					      ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the variance (not the sigma)  of the the Z0 of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_Z0_cov (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					      ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the variance (not the sigma)  of the the Phi of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_phi_cov (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+					       ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the variance (not the sigma)  of the omega of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_omega_cov (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						 ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the variance (not the sigma)  of the tanLambda of a track to a reconstructed particle
+  ROOT::VecOps::RVec<float> getRP2TRK_tanLambda_cov (ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						     ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (d0, phi0) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_d0_phi0_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						  ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (d0, omega) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_d0_omega_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						   ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (d0,z0) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_d0_z0_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (d0,tanlambda) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_d0_tanlambda_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						       ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (phi0,omega) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_phi0_omega_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						     ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (phi0,z0) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_phi0_z0_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						  ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+  /// Return the off-diag term (phi0,tanlambda) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_phi0_tanlambda_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+							 ROOT::VecOps::RVec<edm4hep::TrackState> tracks) ;
+
+  /// Return the off-diag term (omega,z0) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_omega_z0_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						   ROOT::VecOps::RVec<edm4hep::TrackState> tracks) ;
+
+  /// Return the off-diag term (omega,tanlambda) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_omega_tanlambda_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+							  ROOT::VecOps::RVec<edm4hep::TrackState> tracks) ;
+
+  /// Return the off-diag term (z0,tanlambda) of the covariance matrix
+  ROOT::VecOps::RVec<float> getRP2TRK_z0_tanlambda_cov(ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						       ROOT::VecOps::RVec<edm4hep::TrackState> tracks);
+
+
+  /// Return the tracks associated to reco'ed particles
+  ROOT::VecOps::RVec<edm4hep::TrackState> getRP2TRK( ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in,
+						     ROOT::VecOps::RVec<edm4hep::TrackState> tracks ) ;
+
+  /// Return the reco indices of particles that have tracks
+  ROOT::VecOps::RVec<int> get_recoindTRK( ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in, 
+					  ROOT::VecOps::RVec<edm4hep::TrackState> tracks ) ;
+  
+  /// Return the size of a collection of TrackStates
+  int getTK_n(ROOT::VecOps::RVec<edm4hep::TrackState> x) ;
+
+  /// Return if a Reco particle have an associated track
+  ROOT::VecOps::RVec<bool> hasTRK( ROOT::VecOps::RVec<edm4hep::ReconstructedParticleData> in ) ;
+
+}//end NS ReconstructedParticle2Track
+
+}//end NS FCCAnalyses
+#endif
