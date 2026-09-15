@@ -15,7 +15,7 @@ parser.add_argument("-o", "--output_folder_name", type=str, default="")
 args, _ = parser.parse_known_args()
 
 inputDir  = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Stage1"
-#inputDir  = "/data/dust/group/cms/searches-desy/FCC-LLP-stau/Data/240/FCCAna/Stage1" # To get them from the commun CMS NAF (beaware of the energy in the path)
+# inputDir  = "/data/dust/group/cms/searches-desy/FCC-LLP-stau/Data/365/FCCAna/Stage1" # To get them from the commun CMS NAF (beaware of the energy in the path)
 outputDir = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Final/" + args.output_folder_name + "/root/"
 
 # List of datasets used in the analysis
@@ -26,175 +26,178 @@ processList = {
         ###################################################
         #             FCCee: 365 GeV - 0.5 m              #
         ###################################################
-        # "FCCee_120_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_0.5m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 1 m                #
         ###################################################
-        # "FCCee_120_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_1m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_1m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_1m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 2 m                #
         ###################################################
-        # "FCCee_120_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_2m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_2m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_2m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 5 m                #
         ###################################################
-        # "FCCee_120_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_5m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_5m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_5m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 10 m               #
         ###################################################
-        # "FCCee_120_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_10m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_10m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_10m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 20 m               #
         ###################################################
-        # "FCCee_120_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_20m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_20m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_20m_ctau_ecm_365": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 365 GeV - 50 m               #
         ###################################################
-        # "FCCee_120_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_130_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_140_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_150_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_160_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_170_stau_50m_ctau_ecm_365": {'fraction': 1.0},
-        # "FCCee_180_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_120_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_130_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_140_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_150_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_160_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_170_stau_50m_ctau_ecm_365": {'fraction': 1.0},
+        "FCCee_180_stau_50m_ctau_ecm_365": {'fraction': 1.0},
         
+        ###################################################
+        #               BACKGROUND - 365GeV               #
+        ###################################################
+        'p8_ee_WW_ecm365': {'fraction': 1.0,'chunks':100},
+        'p8_ee_ZZ_ecm365': {'fraction': 1.0,'chunks':100},
+        'wzp6_ee_nuenueH_Htautau_ecm365': {'fraction': 1.0,'chunks':100},
+        'wzp6_ee_bbH_Htautau_ecm365': {'fraction': 1.0,'chunks':100},
+        'p8_ee_tt_ecm365': {'fraction': 1.0,'chunks':100},
+        'wzp6_ee_tautau_ecm365': {'fraction': 1.0,'chunks':100},
+
 	    ###################################################
         #             FCCee: 240 GeV - 20 cm              #
         ###################################################
-        "FCCee_100_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #             FCCee: 240 GeV - 50 cm              #
         ###################################################
-        "FCCee_100_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #              FCCee: 240 GeV - 1 m               #
         ###################################################
-        "FCCee_100_stau_1m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_1m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_1m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_1m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_1m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_1m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_1m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #              FCCee: 240 GeV - 5 m               #
         ###################################################
-        "FCCee_100_stau_5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_5m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_5m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #              FCCee: 240 GeV - 6 m               #
         ###################################################
-        "FCCee_100_stau_6m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_6m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_6m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_6m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_6m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_6m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_6m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #             FCCee: 240 GeV - 10 m               #
         ###################################################
-        "FCCee_100_stau_10m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_10m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_10m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_10m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_10m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_10m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_10m_ctau_ecm_240": {'fraction': 1.0},
 
 	    ###################################################
         #             FCCee: 240 GeV - 20 m               #
         ###################################################
-        "FCCee_100_stau_20m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_20m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_20m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_20m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_20m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_20m_ctau_ecm_240": {'fraction': 1.0},
 
         ###################################################
         #             FCCee: 240 GeV - 50 m               #
         ###################################################
-        "FCCee_100_stau_50m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_105_stau_50m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_110_stau_50m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_115_stau_50m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_118_stau_50m_ctau_ecm_240": {'fraction': 1.0},
-        "FCCee_119_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_100_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_105_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_110_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_115_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_118_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        # "FCCee_119_stau_50m_ctau_ecm_240": {'fraction': 1.0},
 
         ###################################################
-        #                   BACKGROUND                    #
+        #               BACKGROUND - 240GeV               #
         ###################################################
-        # 'p8_ee_WW_ecm365': {'fraction': 1.0,'chunks':100},
-        # 'p8_ee_ZZ_ecm365': {'fraction': 1.0,'chunks':100},
-        # 'wzp6_ee_nuenueH_Htautau_ecm365': {'fraction': 1.0,'chunks':100},
-        # 'wzp6_ee_bbH_Htautau_ecm365': {'fraction': 1.0,'chunks':100},
-        # 'p8_ee_tt_ecm365': {'fraction': 1.0,'chunks':100},
-        # 'wzp6_ee_tautau_ecm365': {'fraction': 1.0,'chunks':100},
-
-	'p8_ee_WW_ecm240': {'fraction': 1.0, 'chunks': 100},
-	'p8_ee_ZZ_ecm240': {'fraction': 1.0, 'chunks': 100},
-	'mgp8_ee_zh_ecm240_hbb': {'fraction': 1.0, 'chunks': 100},
-	'wzp6_ee_nuenueH_Htautau_ecm240': {'fraction': 1.0, 'chunks': 100},
-	'wzp6_ee_bbH_Htautau_ecm240': {'fraction': 1.0, 'chunks': 100},
+        # 'p8_ee_WW_ecm240': {'fraction': 1.0, 'chunks': 100},
+        # 'p8_ee_ZZ_ecm240': {'fraction': 1.0, 'chunks': 100},
+        # 'mgp8_ee_zh_ecm240_hbb': {'fraction': 1.0, 'chunks': 100},
+        # 'wzp6_ee_nuenueH_Htautau_ecm240': {'fraction': 1.0, 'chunks': 100},
+        # 'wzp6_ee_bbH_Htautau_ecm240': {'fraction': 1.0, 'chunks': 100},
     }
 
 prodTag = "FCCee/winter2023/IDEA/"
@@ -204,121 +207,122 @@ procDict = "FCCee_procDict_winter2023_IDEA.json"
 
 # Add samples which are not part of the offical process
 procDictAdd = {
-    # 'FCCee_120_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_0.5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    # 'FCCee_120_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_1m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
     
-    # 'FCCee_120_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_2m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    # 'FCCee_120_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_5m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    # 'FCCee_120_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_10m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    # 'FCCee_120_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_20m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    # 'FCCee_120_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_130_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_140_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_150_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_160_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_170_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    # 'FCCee_180_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_120_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.36226000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_130_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 6.75979000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_140_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.16167000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_150_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 3.61349000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_160_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.17607000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_170_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.40847000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_180_stau_50m_ctau_ecm_365': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 8.77581000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_0.2m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_0.5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_10m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
-    'FCCee_100_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_105_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_110_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_115_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_118_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
-    'FCCee_119_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_100_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_105_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_110_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_115_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_118_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    # 'FCCee_119_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 }
 
+intLumi = 0.67e6 # lumi for 4 year per IP (365GeV)
 # intLumi = 0.67e6 / 4 # lumi for 1 year per IP (365GeV)
-intLumi = 2.7e6 # per IP at 3 years (240GeV)
+# intLumi = 2.7e6 # per IP at 3 years (240GeV)
 
 doScale = True
 # saveMetaData = True
