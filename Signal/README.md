@@ -1,7 +1,5 @@
 # How to use the Signal Folder
 
-! TO DO !
-
 ## Setup
 
 - Start a new shell
