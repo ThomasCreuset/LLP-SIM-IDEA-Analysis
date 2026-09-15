@@ -1,5 +1,6 @@
 # Data Folder structure
 
+```
 Data/
 ├── k4SD/
 │   └── For data coming from k4simdelphes run (Signal)
@@ -10,4 +11,4 @@ Data/
     └── Final/
         └── For data coming from analysis_final.py or analysis_plots.py
             of FCCAnalysis (Signal)
-
+```
