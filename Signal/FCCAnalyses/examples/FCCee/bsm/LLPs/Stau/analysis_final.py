@@ -14,8 +14,8 @@ parser.add_argument("-o", "--output_folder_name", type=str, default="")
 
 args, _ = parser.parse_known_args()
 
-#inputDir  = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Stage1"
-inputDir  = "/data/dust/group/cms/searches-desy/FCC-LLP-stau/Data/240/FCCAna/Stage1"
+inputDir  = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Stage1"
+#inputDir  = "/data/dust/group/cms/searches-desy/FCC-LLP-stau/Data/240/FCCAna/Stage1" # To get them from the commun CMS NAF (beaware of the energy in the path)
 outputDir = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Final/" + args.output_folder_name + "/root/"
 
 # List of datasets used in the analysis

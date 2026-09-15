@@ -13,6 +13,11 @@
 - Run `confFCC`
 - Run `compileFCC`
 
+You can do a fresh install of pythia8 if needed
+- Go to `mc-pythia-main`
+- Run `./bin/mg5_aMC` to launch
+- In madGraph terminal, run `install pythia8` (no need for LHAPDF), then `exit`
+
 ## Running
 
 ### mc-pythia
@@ -67,7 +72,7 @@ If you want to run on Condor:
 - Use `source setup.sh`
 - Go to `FCCAnalyses/examples/FCCee/bsm/LLPs/Stau`
 - Modify the list of processes, the luminosity and paths in `analysis_final.py` (if you still have the madGraphs files, you can put fake values for cross sections and use the command `bash updateFinal.sh` to automatically update them)
-- Run `fccanalysis final analysis_final.py -o OUTPUT_DIR_NAME`, where `OUTPUT_DIR_NAME` correspond to the name of the subfolder in `Data/FCCAna/Final/`
+- Run `fccanalysis final analysis_final.py -o OUTPUT_DIR_NAME`, where `OUTPUT_DIR_NAME` correspond to the name of the subfolder in `Data/FCCAna/Final/` (if not specify it will output directly in `Final`, which is fine if you do not do multiple selections)
 
 ### Plots
 
@@ -78,7 +83,7 @@ If you want to run on Condor:
 - Use `source setup.sh`
 - Go to `FCCAnalyses_pre/examples/FCCee/bsm/LLPs/Stau`
 - Modify the list of processes and paths in `analysis_plots.py` and make the luminosity match the one of `analysis_final.py`
-- Run `fccanalysis plots  analysis_plots.py -i INPUT_DIR -o OUTPUT_DIR_NAME`, where `INPUT_DIR` and `OUTPUT_DIR_NAME` corespond to the name of the subfolder in `Data/FCCAna/Final/` (if none specify it will output directly in `Final`, which is fine if you do not do multiple selections)
+- Run `fccanalysis plots  analysis_plots.py -i INPUT_DIR -o OUTPUT_DIR_NAME`, where `INPUT_DIR` and `OUTPUT_DIR_NAME` corespond to the name of the subfolder in `Data/FCCAna/Final/` (if not specify it will output directly in `Final`, which is fine if you do not do multiple selections)
 
 ## In case of modifications of the code
 
