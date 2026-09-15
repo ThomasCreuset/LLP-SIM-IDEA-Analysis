@@ -2,6 +2,9 @@
 
 source /cvmfs/sw.hsf.org/key4hep/setup.sh
 
+# Restore Pythia path
+export PYTHIA8DATA=""
+
 # get the directory where this script is located. This should be the FCCAnalysis folder.  
 BASE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/..
 export LOCAL_DIR=$(cd $(dirname "${BASH_SOURCE}") && pwd)

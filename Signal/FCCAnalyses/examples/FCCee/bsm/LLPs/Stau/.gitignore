@@ -1,5 +1,9 @@
 log/
+Log/
 batch-submission-files/
 __pycache__/
 *.sys.v*
 /output/final/
+*.cc
+
+!*.txt

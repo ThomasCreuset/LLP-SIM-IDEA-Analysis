@@ -5,7 +5,8 @@ import os
 import ROOT
 import argparse
 # use this : source /cvmfs/sw.hsf.org/key4hep/setup.sh -r 2024-03-10
-intLumi        = 0.67e6 / 4 # lumi for 1 year per IP
+# intLumi        = 0.67e6 / 4 # lumi for 1 year per IP (365GeV)
+intLumi        = 2.7e6 # per IP at 3 years (240GeV)
 ###If scaleSig=0 or scaleBack=0, we don't apply any additional scaling, on top of the normalization to cross section and integrated luminosity, as defined in finalSel.py
 ###If scaleSig or scaleBack is not defined, plots will be normalized to 1
 scaleSig       = 1

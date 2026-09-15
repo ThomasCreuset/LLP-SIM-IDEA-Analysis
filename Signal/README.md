@@ -56,7 +56,7 @@ If you want to run on Condor:
 - Go to `FCCAnalyses/examples/FCCee/bsm/LLPs/Stau`
 - Modify the paths in `analysis_stage1.py`
 - Modify the list of process in `MySampleList.txt`
-- Run `submit signalOnCondor.sub`
+- Run `condor_submit signalOnCondor.sub`
 
 ### Final
 

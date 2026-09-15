@@ -14,7 +14,8 @@ parser.add_argument("-o", "--output_folder_name", type=str, default="")
 
 args, _ = parser.parse_known_args()
 
-inputDir  = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Stage1"
+#inputDir  = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Stage1"
+inputDir  = "/data/dust/group/cms/searches-desy/FCC-LLP-stau/Data/240/FCCAna/Stage1"
 outputDir = "/data/dust/user/creusett/SummerSchool/Data/FCCAna/Final/" + args.output_folder_name + "/root/"
 
 # List of datasets used in the analysis
@@ -99,7 +100,7 @@ processList = {
         # "FCCee_170_stau_50m_ctau_ecm_365": {'fraction': 1.0},
         # "FCCee_180_stau_50m_ctau_ecm_365": {'fraction': 1.0},
         
-	###################################################
+	    ###################################################
         #             FCCee: 240 GeV - 20 cm              #
         ###################################################
         "FCCee_100_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
@@ -109,7 +110,7 @@ processList = {
         "FCCee_118_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_0.2m_ctau_ecm_240": {'fraction': 1.0},
 
-	###################################################
+	    ###################################################
         #             FCCee: 240 GeV - 50 cm              #
         ###################################################
         "FCCee_100_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
@@ -119,7 +120,7 @@ processList = {
         "FCCee_118_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_0.5m_ctau_ecm_240": {'fraction': 1.0},
 
-	###################################################
+	    ###################################################
         #              FCCee: 240 GeV - 1 m               #
         ###################################################
         "FCCee_100_stau_1m_ctau_ecm_240": {'fraction': 1.0},
@@ -129,7 +130,17 @@ processList = {
         "FCCee_118_stau_1m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_1m_ctau_ecm_240": {'fraction': 1.0},
 
-	###################################################
+	    ###################################################
+        #              FCCee: 240 GeV - 5 m               #
+        ###################################################
+        "FCCee_100_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_105_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_110_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_115_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_118_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_119_stau_5m_ctau_ecm_240": {'fraction': 1.0},
+
+	    ###################################################
         #              FCCee: 240 GeV - 6 m               #
         ###################################################
         "FCCee_100_stau_6m_ctau_ecm_240": {'fraction': 1.0},
@@ -139,7 +150,7 @@ processList = {
         "FCCee_118_stau_6m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_6m_ctau_ecm_240": {'fraction': 1.0},
 
-	###################################################
+	    ###################################################
         #             FCCee: 240 GeV - 10 m               #
         ###################################################
         "FCCee_100_stau_10m_ctau_ecm_240": {'fraction': 1.0},
@@ -149,7 +160,7 @@ processList = {
         "FCCee_118_stau_10m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_10m_ctau_ecm_240": {'fraction': 1.0},
 
-	###################################################
+	    ###################################################
         #             FCCee: 240 GeV - 20 m               #
         ###################################################
         "FCCee_100_stau_20m_ctau_ecm_240": {'fraction': 1.0},
@@ -158,6 +169,16 @@ processList = {
         "FCCee_115_stau_20m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_118_stau_20m_ctau_ecm_240": {'fraction': 1.0},
         "FCCee_119_stau_20m_ctau_ecm_240": {'fraction': 1.0},
+
+        ###################################################
+        #             FCCee: 240 GeV - 50 m               #
+        ###################################################
+        "FCCee_100_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_105_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_110_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_115_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_118_stau_50m_ctau_ecm_240": {'fraction': 1.0},
+        "FCCee_119_stau_50m_ctau_ecm_240": {'fraction': 1.0},
 
         ###################################################
         #                   BACKGROUND                    #
@@ -260,6 +281,13 @@ procDictAdd = {
     'FCCee_118_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
     'FCCee_119_stau_1m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 
+    'FCCee_100_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_105_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_110_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_115_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_118_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_119_stau_5m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+
     'FCCee_100_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
     'FCCee_105_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
     'FCCee_110_stau_6m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
@@ -280,10 +308,17 @@ procDictAdd = {
     'FCCee_115_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
     'FCCee_118_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
     'FCCee_119_stau_20m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
+
+    'FCCee_100_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 7.73489000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_105_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 5.19621000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_110_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.92320000e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_115_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 1.06740600e-02, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_118_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 2.75218000e-03, "kfactor": 1.0, "matchingEfficiency": 1.0},
+    'FCCee_119_stau_50m_ctau_ecm_240': {"numberOfEvents": 100000, "sumOfWeights": 100000, "crossSection": 9.79199000e-04, "kfactor": 1.0, "matchingEfficiency": 1.0},
 }
 
-# intLumi = 0.67e6 / 4 # lumi for 1 year per IP
-intLumi = 0.67e6 / 4
+# intLumi = 0.67e6 / 4 # lumi for 1 year per IP (365GeV)
+intLumi = 2.7e6 # per IP at 3 years (240GeV)
 
 doScale = True
 # saveMetaData = True
